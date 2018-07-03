@@ -43,5 +43,14 @@ Ubuntu 下安装：sudo apt-get install git
 或者
 	git rm + git commit -m "..."
 
+与github远端账户建立联系
+
+生成SSH的RSA加密密钥：ssh-keygen -t rsa -C "1723055493@qq.com"
+
+回到github，进入SSH and GPG Keys一栏，填上key
+
+测试key添加是否成功：ssh -T git@github.com
+
+注意此时本地仓库的用户名和邮箱必须根github上的一致
 
 
