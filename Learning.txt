@@ -1,0 +1,47 @@
+Ubuntu 下安装：sudo apt-get install git
+
+设置用户当前信息：
+	git config --global user.name "xxx"
+	git config --global user.email xxxx@xxx.com
+
+创建仓库：git init
+
+添加并提交文件至仓库：
+	touch text.txt
+	echo "This is a test file for git." >> text.txt
+	git add text.txt
+	git commit -m "Create and write into text.txt"
+-m 后面是注释的内容，告诉别人自己修改了什么。
+
+查看文件状态：git status
+查看具体修改内容：git diff
+查看历史修改：git log
+减少输出信息的历史操作查看：git log --pretty=oneline
+查看每一次操作记录：git reflog
+
+回撤到当前版本号：git reset --hard HEAD
+回撤到上一个版本号：git reset --hard HEAD^
+回撤到大上个版本号：git reset --hard HEAD^^
+回撤到大大上个版本号：git reset --hard HEAD^
+...
+回退100个版本：git reset --hard HEAD~100
+
+回撤到特定版本号，例如回撤到版本号3：git reset --hard HEAD@{3}
+
+查看工作区和版本库里面最新版本的区别：git diff HEAD -- xxx
+
+撤销修改：git checkout -- file
+已经添加到缓冲区，还未提交，恢复到添加动作之前：git reset HEAD xxx
+
+工作区删除文件：rm xxx
+提交删除动作至版本库：git commit -am "..."
+
+或者一次性用 git rm 指令删除工作区里面对应的文件，并且记录下操作，之后再用普通提交指令达到直接删除版本库对应文件效果
+
+即：
+	rm + git commit -am "..."
+或者
+	git rm + git commit -m "..."
+
+
+
