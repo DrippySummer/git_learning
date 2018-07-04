@@ -51,6 +51,13 @@ Ubuntu 下安装：sudo apt-get install git
 
 测试key添加是否成功：ssh -T git@github.com
 
-注意此时本地仓库的用户名和邮箱必须根github上的一致
+注意此时本地仓库的用户名和邮箱必须根github上的用户信息一致
+
+本地操作创建远端仓库：git remote add origin git@github.com:xxx/xxx.git
+
+进入github网站，登入自己的页面，创建跟本地仓库名字（当前文件夹名字）一样的仓库，然后会出现一个非代码界面，他会让你确认远端操作，
+选择SSH类型传输，然后关闭页面就可以了
+
+本地使用add和commit修改提交完的文件内容，github远端上传同步使用指令：git push origin master
 
 
