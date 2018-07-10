@@ -22,7 +22,7 @@ Ubuntu 下安装：sudo apt-get install git
 回撤到当前版本号：git reset --hard HEAD
 回撤到上一个版本号：git reset --hard HEAD^
 回撤到大上个版本号：git reset --hard HEAD^^
-回撤到大大上个版本号：git reset --hard HEAD^
+回撤到大大上个版本号：git reset --hard HEAD^^^
 ...
 回退100个版本：git reset --hard HEAD~100
 
